@@ -1,7 +1,7 @@
 import DbConnect from "@/lib/config/db";
 import User from "@/lib/model";
 import { NextResponse } from "next/server";
-import bcrypt from "bcrypt"; // Ensure bcrypt is installed
+import bcrypt from "bcrypt"; 
 
 // signUp
 
@@ -20,7 +20,7 @@ export async function POST(req) {
             });
         }
 
-        // Hash the password
+    
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // Create new user with hashed password
